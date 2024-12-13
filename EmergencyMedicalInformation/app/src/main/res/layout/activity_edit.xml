@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".EditActivity">
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/guide_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/birth"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guide_left"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/blood_type"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="혈액형"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guide_left"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/call"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비상 연락처"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guide_left"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/warning"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주의사항"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guide_left"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/thick_underline"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textColorHighlight="#C8B6E8"
+        app:layout_constraintBaseline_toBaselineOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/guide_input_left"
+        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/et_birth"
+        style="@style/value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="0000-00-00"
+        app:layout_constraintBaseline_toBaselineOf="@id/birth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/guide_input_left"
+        app:layout_constraintRight_toRightOf="@id/guide_input_right"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageView
+        android:id="@+id/img_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit_calendar_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="@id/guide_input_right"
+        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <RadioGroup
+        android:id="@+id/radio_blood_type"
+        style="@style/value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/guide_input_left"
+        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintWidth_percent="0.3">
+
+        <RadioButton
+            android:id="@+id/rh_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rh+" />
+
+        <RadioButton
+            android:id="@+id/rh_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rh-" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner_blood_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/radio_blood_type"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="@id/guide_input_left"
+        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintTop_toTopOf="@+id/radio_blood_type"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <EditText
+        android:id="@+id/et_call"
+        style="@style/value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/thick_underline"
+        android:gravity="end"
+        android:hint="000-0000-0000"
+        android:textColorHighlight="#C8B6E8"
+        app:layout_constraintBaseline_toBaselineOf="@id/call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/guide_input_left"
+        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0" />
+
+    <EditText
+        android:id="@+id/et_warning"
+        style="@style/value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/check_warning"
+        app:layout_constraintStart_toStartOf="@+id/check_warning"
+        app:layout_constraintTop_toBottomOf="@+id/check_warning" />
+
+    <CheckBox
+        android:id="@+id/check_warning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:text="주의사항노출"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@id/guide_input_left"
+        app:layout_constraintRight_toRightOf="@id/guide_right"
+        app:layout_constraintTop_toTopOf="@id/guide_top"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_input_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_input_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_save_24"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/birth_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="birth,img_birth"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
