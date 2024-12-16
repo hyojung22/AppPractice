@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Stopwatch</string>
+
+    <string name="start">시작</string>
+    <string name="pause">일시정지</string>
+    <string name="refresh">초기화</string>
+    <string name="check">체크</string>
+    <string name="countdown">카운트다운</string>
+</resources>
